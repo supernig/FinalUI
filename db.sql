@@ -79,12 +79,13 @@ CREATE TABLE `items` (
   `categoryID` int(11) NOT NULL,
   `tagID` int(11) NOT NULL,
   `stocks` int(11) NOT NULL,
-  `isDeployed` int(11) NOT NULL,
+  `isDeployable` int(11) NOT NULL,
   `isDamaged` int(11) NOT NULL,
-  `isonrepair` int(11) NOT NULL,
-  `rented` int(11) NOT NULL,
+  `isOnrepair` int(11) NOT NULL,
+  `isRented` int(11) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -93,7 +94,7 @@ CREATE TABLE `items` (
 
 LOCK TABLES `items` WRITE;
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
-INSERT INTO `items` VALUES (25,'test234',1,1,0,0,0,0,0),(26,'test2345',2,1,0,0,0,0,0),(27,'test123',3,1,0,0,0,0,0);
+INSERT INTO `items` VALUES (28,'testni',1,1,1,1,123,0,0,NULL),(29,'test',3,1,0,0,0,0,0,'123'),(31,'testniperoatikra',1,1,0,0,0,0,0,''),(32,'testniperofinalna',1,1,0,0,0,0,0,''),(33,'sureoy',1,1,0,0,0,0,0,''),(34,'testniperodipatinuod',1,1,0,0,0,0,0,'');
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -130,4 +131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-22 15:48:04
+-- Dump completed on 2018-07-29 16:59:51
