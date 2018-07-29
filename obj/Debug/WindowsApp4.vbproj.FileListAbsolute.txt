@@ -30,7 +30,6 @@ C:\Users\A8-7600k\Desktop\FinalUI\bin\Debug\testControl1.pdb
 C:\Users\A8-7600k\Desktop\FinalUI\bin\Debug\testControl1.xml
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.vbprojAssemblyReference.cache
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.exe.config
-C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form1.resources
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Resources.resources
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.UserControl1.resources
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.vbproj.GenerateResource.cache
@@ -39,8 +38,6 @@ C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.vbproj.CopyComplete
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.exe
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.xml
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.pdb
-C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form2.resources
-C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form3.resources
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\WindowsApp4.exe.config
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.exe
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.xml
@@ -60,3 +57,7 @@ C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.F
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Resources.resources
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.UserControl1.resources
 C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.vbproj.GenerateResource.Cache
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.EquipmentUI.resources
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.AddUI.resources
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.ViewUI.resources
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.EditUI.resources

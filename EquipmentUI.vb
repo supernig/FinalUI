@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form1
+Public Class EquipmentUI
     Private Sub UserControl21_Load(sender As Object, e As EventArgs)
 
     End Sub
@@ -12,7 +12,7 @@ Public Class Form1
 
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
-               & "pwd=;" _
+               & "pwd=root;" _
                 & "SslMode=none;" _
                & "database=db"
 
@@ -63,16 +63,16 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim a = New Form2()
+        Dim a = New AddUI()
         a.Show()
 
     End Sub
     Public A As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles view.Click
-        If a Is Nothing Then
+        If A Is Nothing Then
             MsgBox("Nothing is selected.")
         Else
-            Dim b = New Form3()
+            Dim b = New ViewUI()
             b.show()
 
         End If

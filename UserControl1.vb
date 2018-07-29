@@ -17,12 +17,12 @@ Public Class UserControl1
                 Using sda As New MySqlDataAdapter(cmd)
                     Using dt As New DataTable()
                         sda.Fill(dt)
-                        Form1.DataGridView1.DataSource = dt
-                        Form1.DataGridView1.Columns(1).Visible = False
-                        Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                        Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
-                        Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                        Form1.DataGridView1.Refresh()
+                        EquipmentUI.DataGridView1.DataSource = dt
+                        EquipmentUI.DataGridView1.Columns(1).Visible = False
+                        EquipmentUI.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        EquipmentUI.DataGridView1.Columns(2).HeaderCell.Value = "Name"
+                        EquipmentUI.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                        EquipmentUI.DataGridView1.Refresh()
                         '  MsgBox(Form1.DataGridView1.Rows(0).Cells(1).Value.ToString())
                         conn.Close()
                         '  BunifuCustomDataGrid1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -80,12 +80,12 @@ Public Class UserControl1
                     Using sda As New MySqlDataAdapter(cmd)
                         Using dt As New DataTable()
                             sda.Fill(dt)
-                            Form1.DataGridView1.DataSource = dt
-                            Form1.DataGridView1.Columns(1).Visible = False
-                            Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                            Form1.DataGridView1.Columns(2).HeaderCell.Value = "Stocks"
-                            Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                            Form1.DataGridView1.Refresh()
+                            EquipmentUI.DataGridView1.DataSource = dt
+                            EquipmentUI.DataGridView1.Columns(1).Visible = False
+                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Value = "Stocks"
+                            EquipmentUI.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                            EquipmentUI.DataGridView1.Refresh()
                             '  MsgBox(Form1.DataGridView1.Rows(0).Cells(1).Value.ToString())
                             conn.Close()
                             '  BunifuCustomDataGrid1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -119,12 +119,12 @@ Public Class UserControl1
                     Using sda As New MySqlDataAdapter(cmd)
                         Using dt As New DataTable()
                             sda.Fill(dt)
-                            Form1.DataGridView1.DataSource = dt
-                            Form1.DataGridView1.Columns(0).Visible = False
-                            Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                            Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
-                            Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                            Form1.DataGridView1.Refresh()
+                            EquipmentUI.DataGridView1.DataSource = dt
+                            EquipmentUI.DataGridView1.Columns(0).Visible = False
+                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Value = "Name"
+                            EquipmentUI.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                            EquipmentUI.DataGridView1.Refresh()
                             '  MsgBox(Form1.DataGridView1.Rows(0).Cells(1).Value.ToString())
                             conn.Close()
                             '  BunifuCustomDataGrid1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter

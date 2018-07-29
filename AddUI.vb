@@ -1,5 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Form2
+Public Class AddUI
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
 
     End Sub
@@ -40,22 +40,22 @@ Public Class Form2
                                     Using sda As New MySqlDataAdapter(cmd2)
                                         Using dt As New DataTable()
                                             sda.Fill(dt)
-                                            Form1.DataGridView1.DataSource = dt
-                                            Form1.DataGridView1.ReadOnly = False
-                                            Form1.DataGridView1.ClearSelection()
+                                            EquipmentUI.DataGridView1.DataSource = dt
+                                            EquipmentUI.DataGridView1.ReadOnly = False
+                                            EquipmentUI.DataGridView1.ClearSelection()
                                             'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
-                                            Form1.DataGridView1.Columns(1).Visible = False
-                                            Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                            Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
-                                            Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                            Form1.DataGridView1.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                            Form1.DataGridView1.Columns(3).HeaderCell.Value = "Stock"
-                                            Form1.DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                            Form1.DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                            Form1.DataGridView1.Columns(0).HeaderCell.Value = ""
-                                            Form1.DataGridView1.Columns(0).Width = 50
-                                            Form1.DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                                            Form1.DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                            EquipmentUI.DataGridView1.Columns(1).Visible = False
+                                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                            EquipmentUI.DataGridView1.Columns(2).HeaderCell.Value = "Name"
+                                            EquipmentUI.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                            EquipmentUI.DataGridView1.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                            EquipmentUI.DataGridView1.Columns(3).HeaderCell.Value = "Stock"
+                                            EquipmentUI.DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                            EquipmentUI.DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                            EquipmentUI.DataGridView1.Columns(0).HeaderCell.Value = ""
+                                            EquipmentUI.DataGridView1.Columns(0).Width = 50
+                                            EquipmentUI.DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                            EquipmentUI.DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                                         End Using
                                     End Using

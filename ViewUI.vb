@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
-Public Class Form3
+Public Class ViewUI
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
 
     End Sub
@@ -15,7 +15,7 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         myConnectionString = "server=127.0.0.1;" _
        & "uid=root;" _
-       & "pwd=;" _
+       & "pwd=root;" _
                 & "SslMode=none;" _
        & "database=db"
 
@@ -23,7 +23,7 @@ Public Class Form3
         conn.Open()
 
         Using con As New MySqlConnection(myConnectionString)
-            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented FROM items left join category on items.categoryID = category.id where items.id =" & Form1.A, conn)
+            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented FROM items left join category on items.categoryID = category.id where items.id =" & EquipmentUI.A, conn)
                 cmd.CommandType = CommandType.Text
                 Using sda As New MySqlDataAdapter(cmd)
 
@@ -41,7 +41,7 @@ Public Class Form3
                         Label14.Text = myreader.GetValue(6)
                         Label15.Text = myreader.GetValue(7)
                         Label16.Text = myreader.GetValue(8)
-                        me.Text = myreader.GetValue(1)
+                        Me.Text = myreader.GetValue(1)
                     End If
                     myreader.Close()
                 End Using
@@ -65,8 +65,8 @@ Public Class Form3
   
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-       
-        Dim b = New Form4()
+
+        Dim b = New EditUI()
         b.Show()
 
     End Sub

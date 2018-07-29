@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports MySql.Data.MySqlClient
-Public Class Form4
+Public Class EditUI
     Dim conn As New MySql.Data.MySqlClient.MySqlConnection
     Dim myConnectionString As String
 
@@ -8,7 +8,7 @@ Public Class Form4
 
         myConnectionString = "server=127.0.0.1;" _
  & "uid=root;" _
- & "pwd=;" _
+ & "pwd=root;" _
                 & "SslMode=none;" _
  & "database=db"
 
@@ -16,7 +16,7 @@ Public Class Form4
         conn.Open()
 
         Using con As New MySqlConnection(myConnectionString)
-            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented FROM items left join category on items.categoryID = category.id where items.id =" & Form1.A, conn)
+            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented FROM items left join category on items.categoryID = category.id where items.id =" & EquipmentUI.A, conn)
                 cmd.CommandType = CommandType.Text
                 Using sda As New MySqlDataAdapter(cmd)
 
@@ -48,7 +48,7 @@ Public Class Form4
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         conn.Open()
         Using con As New MySqlConnection(myConnectionString)
-            Using cmd As New MySqlCommand(" UPDATE `db`.`items` SET `name`='" + TextBox1.Text + "',`stocks`=" & TextBox3.Text & ",`categoryID`=" & ComboBox1.SelectedIndex + 1 & ",`description`=" & TextBox2.Text & ",`isDeployable`=" & TextBox4.Text & ",`isDamaged`=" & TextBox5.Text & ",`isOnrepair`=" & TextBox6.Text & ",`isRented`=" & TextBox7.Text & " WHERE (`id` = '" & Form1.A & "');", conn)
+            Using cmd As New MySqlCommand(" UPDATE `db`.`items` SET `name`='" + TextBox1.Text + "',`stocks`=" & TextBox3.Text & ",`categoryID`=" & ComboBox1.SelectedIndex + 1 & ",`description`=" & TextBox2.Text & ",`isDeployable`=" & TextBox4.Text & ",`isDamaged`=" & TextBox5.Text & ",`isOnrepair`=" & TextBox6.Text & ",`isRented`=" & TextBox7.Text & " WHERE (`id` = '" & EquipmentUI.A & "');", conn)
                 cmd.CommandType = CommandType.Text
 
                 If cmd.ExecuteNonQuery > 0 Then
@@ -58,29 +58,29 @@ Public Class Form4
                         Using sda As New MySqlDataAdapter(cmd2)
                             Using dt As New DataTable()
                                 sda.Fill(dt)
-                                Form1.DataGridView1.DataSource = dt
-                                Form1.DataGridView1.ReadOnly = False
-                                Form1.DataGridView1.ClearSelection()
+                                EquipmentUI.DataGridView1.DataSource = dt
+                                EquipmentUI.DataGridView1.ReadOnly = False
+                                EquipmentUI.DataGridView1.ClearSelection()
                                 'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
-                                Form1.DataGridView1.Columns(1).Visible = False
-                                Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
-                                Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                Form1.DataGridView1.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                Form1.DataGridView1.Columns(3).HeaderCell.Value = "Stock"
-                                Form1.DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                Form1.DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-                                Form1.DataGridView1.Columns(0).HeaderCell.Value = ""
-                                Form1.DataGridView1.Columns(0).Width = 50
-                                Form1.DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-                                Form1.DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                EquipmentUI.DataGridView1.Columns(1).Visible = False
+                                EquipmentUI.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                EquipmentUI.DataGridView1.Columns(2).HeaderCell.Value = "Name"
+                                EquipmentUI.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                EquipmentUI.DataGridView1.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                EquipmentUI.DataGridView1.Columns(3).HeaderCell.Value = "Stock"
+                                EquipmentUI.DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                EquipmentUI.DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                EquipmentUI.DataGridView1.Columns(0).HeaderCell.Value = ""
+                                EquipmentUI.DataGridView1.Columns(0).Width = 50
+                                EquipmentUI.DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                EquipmentUI.DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
                             End Using
                         End Using
                     End Using
                    
                     Me.Hide()
-                    Dim b = New Form3()
+                    Dim b = New ViewUI()
                     b.Hide()
 
 
