@@ -39,3 +39,5 @@ C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.vbproj.CopyComplete
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.exe
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.xml
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.pdb
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form2.resources
+C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form3.resources

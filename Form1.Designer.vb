@@ -77,7 +77,6 @@ Partial Class Form1
         Me.view.TabIndex = 5
         Me.view.Text = "View"
         Me.view.UseVisualStyleBackColor = True
-        Me.view.Visible = False
         '
         'edit
         '
@@ -87,7 +86,6 @@ Partial Class Form1
         Me.edit.TabIndex = 6
         Me.edit.Text = "Delete"
         Me.edit.UseVisualStyleBackColor = True
-        Me.edit.Visible = False
         '
         'UserControl11
         '
@@ -106,8 +104,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.UserControl11)
         Me.Controls.Add(Me.DataGridView1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Tribes v1.0"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

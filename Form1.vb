@@ -7,6 +7,9 @@ Public Class Form1
     Dim myConnectionString As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.DefaultCellStyle.SelectionBackColor = DataGridView1.DefaultCellStyle.BackColor
+        DataGridView1.DefaultCellStyle.SelectionForeColor = DataGridView1.DefaultCellStyle.ForeColor
+
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
                & "pwd=root;" _
@@ -39,13 +42,12 @@ Public Class Form1
                         DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
                         DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
 
-
-
                     End Using
                 End Using
             End Using
         End Using
 
+        conn.Close()
 
     End Sub
 
@@ -60,11 +62,19 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim a = New Form2()
+        a.Show()
 
     End Sub
-
+    Public A As String
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles view.Click
+        If a Is Nothing Then
+            MsgBox("Nothing is selected.")
+        Else
+            Dim b = New Form3()
+            b.show()
 
+        End If
     End Sub
 
     Private CheckColIndex As Integer = 0
@@ -87,6 +97,7 @@ Public Class Form1
             If Checked Then
                 edit.Visible = True
                 view.Visible = True
+                a = DataGridView1.Rows(e.RowIndex).Cells(1).Value.ToString()
 
             Else
                 MessageBox.Show("You have un-checked")
@@ -106,6 +117,61 @@ Public Class Form1
     End Sub
 
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
+        myConnectionString = "server=127.0.0.1;" _
+               & "uid=root;" _
+               & "pwd=root;" _
+               & "database=db"
+
+        conn.ConnectionString = myConnectionString
+        conn.Open()
+        If a Is Nothing Then
+            MsgBox("Nothing is selected", MsgBoxStyle.Exclamation, "Process Complete")
+
+        Else
+            Using con As New MySqlConnection(myConnectionString)
+                Using cmd As New MySqlCommand("DELETE FROM items WHERE id =" + a, conn)
+                    cmd.CommandType = CommandType.Text
+
+                    If cmd.ExecuteNonQuery > 0 Then
+                        MsgBox("Successfully Deleted", MsgBoxStyle.Exclamation, "Process Complete")
+
+                        Using cmd1 As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks FROM items ", conn)
+                            cmd1.CommandType = CommandType.Text
+                            Using sda As New MySqlDataAdapter(cmd1)
+                                Using dt As New DataTable()
+                                    sda.Fill(dt)
+                                    DataGridView1.DataSource = dt
+                                    DataGridView1.ReadOnly = False
+                                    DataGridView1.ClearSelection()
+
+                                    'DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnMode.Fill
+                                    DataGridView1.Columns(1).Visible = False
+                                    DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                    DataGridView1.Columns(2).HeaderCell.Value = "Name"
+                                    DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                    DataGridView1.Columns(3).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                    DataGridView1.Columns(3).HeaderCell.Value = "Stock"
+                                    DataGridView1.Columns(3).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                    DataGridView1.Columns(0).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+                                    DataGridView1.Columns(0).HeaderCell.Value = ""
+                                    DataGridView1.Columns(0).Width = 50
+                                    DataGridView1.Columns(2).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+                                    DataGridView1.Columns(3).AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+
+                                End Using
+                            End Using
+                        End Using
+                    Else
+                        MsgBox("Something went wrong.", MsgBoxStyle.Exclamation, "Error")
+
+
+
+                    End If
+                End Using
+            End Using
+
+        End If
+        conn.Close()
 
     End Sub
 End Class

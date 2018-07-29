@@ -18,9 +18,9 @@ Public Class UserControl1
                     Using dt As New DataTable()
                         sda.Fill(dt)
                         Form1.DataGridView1.DataSource = dt
-                        Form1.DataGridView1.Columns(0).Visible = False
+                        Form1.DataGridView1.Columns(1).Visible = False
                         Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                        Form1.DataGridView1.Columns(2).HeaderCell.Value = "Stocks"
+                        Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
                         Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                         Form1.DataGridView1.Refresh()
                         '  MsgBox(Form1.DataGridView1.Rows(0).Cells(1).Value.ToString())
@@ -36,6 +36,8 @@ Public Class UserControl1
                 End Using
             End Using
         End Using
+        conn.Close()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -79,7 +81,7 @@ Public Class UserControl1
                         Using dt As New DataTable()
                             sda.Fill(dt)
                             Form1.DataGridView1.DataSource = dt
-                            Form1.DataGridView1.Columns(0).Visible = False
+                            Form1.DataGridView1.Columns(1).Visible = False
                             Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
                             Form1.DataGridView1.Columns(2).HeaderCell.Value = "Stocks"
                             Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
@@ -97,6 +99,7 @@ Public Class UserControl1
                     End Using
                 End Using
             End Using
+            conn.Close()
 
 
         End If
@@ -119,7 +122,7 @@ Public Class UserControl1
                             Form1.DataGridView1.DataSource = dt
                             Form1.DataGridView1.Columns(0).Visible = False
                             Form1.DataGridView1.Columns(2).HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter
-                            Form1.DataGridView1.Columns(2).HeaderCell.Value = "Stocks"
+                            Form1.DataGridView1.Columns(2).HeaderCell.Value = "Name"
                             Form1.DataGridView1.Columns(2).DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
                             Form1.DataGridView1.Refresh()
                             '  MsgBox(Form1.DataGridView1.Rows(0).Cells(1).Value.ToString())
@@ -135,6 +138,8 @@ Public Class UserControl1
                     End Using
                 End Using
             End Using
+            conn.Close()
+
         End If
 
     End Sub
