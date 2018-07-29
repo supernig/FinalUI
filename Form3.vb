@@ -15,7 +15,8 @@ Public Class Form3
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         myConnectionString = "server=127.0.0.1;" _
        & "uid=root;" _
-       & "pwd=root;" _
+       & "pwd=;" _
+                & "SslMode=none;" _
        & "database=db"
 
         conn.ConnectionString = myConnectionString
@@ -40,7 +41,7 @@ Public Class Form3
                         Label14.Text = myreader.GetValue(6)
                         Label15.Text = myreader.GetValue(7)
                         Label16.Text = myreader.GetValue(8)
-
+                        me.Text = myreader.GetValue(1)
                     End If
                     myreader.Close()
                 End Using
@@ -59,6 +60,14 @@ Public Class Form3
     End Sub
 
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
+
+    End Sub
+  
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+       
+        Dim b = New Form4()
+        b.Show()
 
     End Sub
 End Class

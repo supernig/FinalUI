@@ -41,3 +41,22 @@ C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.xml
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.pdb
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form2.resources
 C:\Users\A8-7600k\Desktop\FinalUI\obj\Debug\WindowsApp4.Form3.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\WindowsApp4.exe.config
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.exe
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.xml
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.pdb
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\WindowsApp4.exe
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\WindowsApp4.pdb
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\WindowsApp4.xml
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\Google.Protobuf.dll
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\MySql.Data.xml
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\testControl1.pdb
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\bin\Debug\testControl1.xml
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.vbprojResolveAssemblyReference.cache
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Form1.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Form2.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Form3.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Form4.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.Resources.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.UserControl1.resources
+C:\Users\w33ha\Desktop\BETTER THAN PORN\Sideline\FinalUI\obj\Debug\WindowsApp4.vbproj.GenerateResource.Cache

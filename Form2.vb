@@ -11,7 +11,8 @@ Public Class Form2
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
-               & "pwd=root;" _
+              & "pwd=;" _
+                & "SslMode=none;" _
                & "database=db"
 
         conn.ConnectionString = myConnectionString

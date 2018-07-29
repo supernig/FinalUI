@@ -12,7 +12,8 @@ Public Class Form1
 
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
-               & "pwd=root;" _
+               & "pwd=;" _
+                & "SslMode=none;" _
                & "database=db"
 
         conn.ConnectionString = myConnectionString
@@ -119,7 +120,8 @@ Public Class Form1
     Private Sub edit_Click(sender As Object, e As EventArgs) Handles edit.Click
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
-               & "pwd=root;" _
+               & "pwd=;" _
+                & "SslMode=none;" _
                & "database=db"
 
         conn.ConnectionString = myConnectionString
