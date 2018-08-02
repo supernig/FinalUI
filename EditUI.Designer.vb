@@ -131,7 +131,7 @@ Partial Class EditUI
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(21, 263)
+        Me.Label10.Location = New System.Drawing.Point(23, 353)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(56, 13)
         Me.Label10.TabIndex = 12
@@ -139,14 +139,14 @@ Partial Class EditUI
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(99, 260)
+        Me.TextBox5.Location = New System.Drawing.Point(99, 348)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(235, 20)
         Me.TextBox5.TabIndex = 13
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(135, 415)
+        Me.Button1.Location = New System.Drawing.Point(125, 433)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 14
@@ -167,9 +167,9 @@ Partial Class EditUI
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(23, 322)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(42, 13)
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
         Me.Label12.TabIndex = 16
-        Me.Label12.Text = "Rented"
+        Me.Label12.Text = "Rented:"
         '
         'TextBox6
         '
@@ -187,7 +187,7 @@ Partial Class EditUI
         '
         'dep
         '
-        Me.dep.Location = New System.Drawing.Point(99, 348)
+        Me.dep.Location = New System.Drawing.Point(99, 258)
         Me.dep.Name = "dep"
         Me.dep.Size = New System.Drawing.Size(235, 20)
         Me.dep.TabIndex = 20
@@ -195,15 +195,15 @@ Partial Class EditUI
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(23, 348)
+        Me.Label2.Location = New System.Drawing.Point(21, 261)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 13)
+        Me.Label2.Size = New System.Drawing.Size(55, 13)
         Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Deployed"
+        Me.Label2.Text = "Deployed:"
         '
         'dbr
         '
-        Me.dbr.Location = New System.Drawing.Point(155, 374)
+        Me.dbr.Location = New System.Drawing.Point(155, 383)
         Me.dbr.Name = "dbr"
         Me.dbr.Size = New System.Drawing.Size(179, 20)
         Me.dbr.TabIndex = 22
@@ -211,7 +211,7 @@ Partial Class EditUI
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 377)
+        Me.Label4.Location = New System.Drawing.Point(21, 390)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(126, 13)
         Me.Label4.TabIndex = 21

@@ -138,7 +138,7 @@ Partial Class ViewUI
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(19, 200)
+        Me.Label10.Location = New System.Drawing.Point(12, 275)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(56, 13)
         Me.Label10.TabIndex = 10
@@ -174,7 +174,7 @@ Partial Class ViewUI
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(81, 200)
+        Me.Label14.Location = New System.Drawing.Point(81, 275)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(35, 13)
         Me.Label14.TabIndex = 14
@@ -201,7 +201,7 @@ Partial Class ViewUI
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(16, 279)
+        Me.Label17.Location = New System.Drawing.Point(19, 198)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(52, 13)
         Me.Label17.TabIndex = 17
@@ -219,7 +219,7 @@ Partial Class ViewUI
         'dep
         '
         Me.dep.AutoSize = True
-        Me.dep.Location = New System.Drawing.Point(81, 279)
+        Me.dep.Location = New System.Drawing.Point(81, 198)
         Me.dep.Name = "dep"
         Me.dep.Size = New System.Drawing.Size(35, 13)
         Me.dep.TabIndex = 19
