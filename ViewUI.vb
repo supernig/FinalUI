@@ -15,7 +15,7 @@ Public Class ViewUI
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         myConnectionString = "server=127.0.0.1;" _
        & "uid=root;" _
-       & "pwd=root;" _
+       & "pwd=;" _
                 & "SslMode=none;" _
        & "database=db"
 
@@ -23,7 +23,7 @@ Public Class ViewUI
         conn.Open()
 
         Using con As New MySqlConnection(myConnectionString)
-            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented FROM items left join category on items.categoryID = category.id where items.id =" & EquipmentUI.A, conn)
+            Using cmd As New MySql.Data.MySqlClient.MySqlCommand("SELECT items.id,items.name,items.stocks,category.description,items.description,items.isDeployable,items.isDamaged,items.isOnrepair,items.isRented,items.isDeployed,items.isDamagedBeyondRepair FROM items left join category on items.categoryID = category.id where items.id =" & EquipmentUI.A, conn)
                 cmd.CommandType = CommandType.Text
                 Using sda As New MySqlDataAdapter(cmd)
 
@@ -41,6 +41,8 @@ Public Class ViewUI
                         Label14.Text = myreader.GetValue(6)
                         Label15.Text = myreader.GetValue(7)
                         Label16.Text = myreader.GetValue(8)
+                        dep.Text = myreader.GetValue(9)
+                        dbr.Text = myreader.GetValue(10)
                         Me.Text = myreader.GetValue(1)
                     End If
                     myreader.Close()
@@ -68,6 +70,10 @@ Public Class ViewUI
 
         Dim b = New EditUI()
         b.Show()
+
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
 
     End Sub
 End Class

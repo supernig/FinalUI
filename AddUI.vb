@@ -30,7 +30,7 @@ Public Class AddUI
                     MsgBox("Inputs cannot be blank.", MsgBoxStyle.Exclamation, "Process Complete")
                 Else
                     Using con As New MySqlConnection(myConnectionString)
-                        Using cmd As New MySqlCommand(" INSERT INTO `db`.`items` (`name`,`categoryID`,`tagID`,`stocks`,`isDeployable`,`isDamaged`,`isOnrepair`,`isRented`,`description`) VALUES ('" + TextBox1.Text + "'," & ComboBox1.SelectedIndex + 1 & ",1,0,0,0,0,0,'" & TextBox2.Text & "');", conn)
+                        Using cmd As New MySqlCommand(" INSERT INTO `db`.`items` (`name`,`categoryID`,`tagID`,`stocks`,`isDeployable`,`isDamaged`,`isOnrepair`,`isRented`,`isDeployed`,`isDamagedBeyondRepair`,`description`) VALUES ('" + TextBox1.Text + "'," & ComboBox1.SelectedIndex + 1 & ",1,0,0,0,0,0,0,0,'" & TextBox2.Text & "');", conn)
                             cmd.CommandType = CommandType.Text
 
                             If cmd.ExecuteNonQuery > 0 Then

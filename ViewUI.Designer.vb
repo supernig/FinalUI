@@ -39,6 +39,10 @@ Partial Class ViewUI
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.dep = New System.Windows.Forms.Label()
+        Me.dbr = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -194,11 +198,51 @@ Partial Class ViewUI
         Me.Label16.TabIndex = 16
         Me.Label16.Text = "Stock"
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(16, 279)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(52, 13)
+        Me.Label17.TabIndex = 17
+        Me.Label17.Text = "Deployed"
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(12, 302)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(126, 13)
+        Me.Label18.TabIndex = 18
+        Me.Label18.Text = "Damaged Beyond Repair"
+        '
+        'dep
+        '
+        Me.dep.AutoSize = True
+        Me.dep.Location = New System.Drawing.Point(81, 279)
+        Me.dep.Name = "dep"
+        Me.dep.Size = New System.Drawing.Size(35, 13)
+        Me.dep.TabIndex = 19
+        Me.dep.Text = "Stock"
+        '
+        'dbr
+        '
+        Me.dbr.AutoSize = True
+        Me.dbr.Location = New System.Drawing.Point(156, 302)
+        Me.dbr.Name = "dbr"
+        Me.dbr.Size = New System.Drawing.Size(35, 13)
+        Me.dbr.TabIndex = 20
+        Me.dbr.Text = "Stock"
+        '
         'ViewUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(404, 438)
+        Me.Controls.Add(Me.dbr)
+        Me.Controls.Add(Me.dep)
+        Me.Controls.Add(Me.Label18)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.Label14)
@@ -242,4 +286,8 @@ Partial Class ViewUI
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Label18 As System.Windows.Forms.Label
+    Friend WithEvents dep As System.Windows.Forms.Label
+    Friend WithEvents dbr As System.Windows.Forms.Label
 End Class

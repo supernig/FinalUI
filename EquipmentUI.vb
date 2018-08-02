@@ -12,7 +12,7 @@ Public Class EquipmentUI
 
         myConnectionString = "server=127.0.0.1;" _
                & "uid=root;" _
-               & "pwd=root;" _
+               & "pwd=;" _
                 & "SslMode=none;" _
                & "database=db"
 
